@@ -23,4 +23,14 @@ call the object's methods, such as increment and setValue.
 doesn't change. I believe this is because it won't input the value as it is
 bigger than 6 which it refuses to recognize.
 
-#9
+#9 Prediction: I believe I will get a value of 0, as the int has achieved the limit.
+which will then in turn set it to 0, as per the Code Source suggests.
+
+#10 Error: non-static method getValue() cannot be referenced from a static context.
+You would need to call from the object itself, not the class. (e.g. NumberDisplay)
+
+#11 "Error: '.class' expected"
+The source code already assumes that the value within the paramater is an int.
+There is no need to call int again in this case.
+
+#12 I assume that we would get 10 as the returned value, as now the parameter is 
