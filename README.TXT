@@ -33,4 +33,28 @@ You would need to call from the object itself, not the class. (e.g. NumberDispla
 The source code already assumes that the value within the paramater is an int.
 There is no need to call int again in this case.
 
-#12 I assume that we would get 10 as the returned value, as now the parameter is 
+#12 I assume that we would get 10 as the returned value, as now the parameter is <=,
+so the value is now recognized.
+
+#13 The only valid parameter value that would no longer set the value field is 0.
+
+#14 The invalid parameter values that now would be able to set the field
+are negative values less than the limit and any values greater or equal to limit.
+
+#15 ! false
+(34 != 33) && ! false
+
+#16 (a && b) || (!a && !b)
+
+#17 (a && !b) || (!a && b)
+
+#18 The getDisplayValue)() method only works when limit is below 10,
+as it assumes values will fit into two digits. With a limit of 1000.
+setValue(345) makes getDisplayValue() return "345", a three-digit
+string not of two.
+
+#19 No they do not have any difference in the result.
+
+#20 Whenever an int is added to a String with +, the int is converted to a String,
+so " " + value and value + " " end up producing the same string.
+
